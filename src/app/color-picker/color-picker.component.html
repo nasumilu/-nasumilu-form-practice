@@ -1,0 +1,52 @@
+<div class="color-picker">
+
+  <div>
+    <label for="red" class="form-label">Red</label>
+    <input class="form-range" type="range" id="red" name="red" [(ngModel)]="color.red" (ngModelChange)="cacheColor()"
+           min="0" max="255" step="1">
+    {{ color.red }}
+  </div>
+
+  <div>
+    <label for="red">Green </label>
+    <input type="range" id="green" name="green" [(ngModel)]="color.green" (ngModelChange)="cacheColor()"
+           min="0" max="255" step="1">
+    {{ color.green }}
+  </div>
+
+  <div>
+    <label for="blue">Blue</label>
+    <input type="range" id="blue" name="blue" [(ngModel)]="color.blue" (ngModelChange)="cacheColor()"
+           min="0" max="255" step="1">
+    {{ color.blue }}
+  </div>
+
+  <div>
+    <label for="alpha">Alpha</label>
+    <input type="range" id="alpha" name="alpha" [(ngModel)]="color.alpha" (ngModelChange)="cacheColor()"
+           min="0" max="1" step="0.1">
+    {{ color.alpha }}
+  </div>
+</div>
+<div class="swatch">
+  <div>
+    <div class="color-value">{{ color.hex }}</div>
+    <div style="flex: 1; background-color: {{ color.hex }};">&nbsp;</div>
+  </div>
+  <div>
+    <div class="color-value">{{ color.rgb }}</div>
+    <div style="flex: 1; background-color: {{ color.rgb }};">&nbsp;</div>
+  </div>
+
+  <div>
+    <div class="color-value">{{ color.hexa }} </div>
+    <div style="flex: 1;background-color: {{ color.hexa }}">&nbsp;</div>
+  </div>
+  <div>
+    <div class="color-value">{{ color.rgba }}</div>
+    <div style="flex:1; background-color: {{ color.rgba }}">&nbsp;</div>
+  </div>
+</div>
+
+
+
